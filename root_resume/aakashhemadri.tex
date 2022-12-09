@@ -1,0 +1,389 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+\definecolor{Heading}{HTML}{6C5B7B}
+\definecolor{Accent}{HTML}{C06784}
+\definecolor{Emphasis}{HTML}{48466D}
+\definecolor{Body}{HTML}{222831}
+
+\definecolor{SlateGrey}{HTML}{222831}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{Heading}
+\colorlet{heading}{Heading}
+\colorlet{headingrule}{Heading}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{Accent}
+\colorlet{emphasis}{Emphasis}
+\colorlet{body}{Body}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+
+\begin{document}
+\name{Aakash Hemadri}
+\tagline{Looking to learn as much as I can. Arch Linux | Rustling | Bash}
+
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{aakashhemadri_square}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+    \homepage{aakashhemadri.com}
+    \email{aakashhemadri123@gmail.com}
+    \location{Chennai, India}
+    \twitter{@aakashhemadri}
+    \github{aakashhemadri}
+    \linkedin{aakashhemadri}
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Associate Software Engineer}{KLA+}{August 2022 -- Present}{Chennai, India}
+\begin{itemize}
+    \item Charged with deploying SMARTS (A DL inspection \& review solution) on Kubernetes w/Helm delivered as RPM packages.
+    \item Required to optimize, create and test images on K8s from the current docker-compose orchestration.
+    \item Collaborated with members cross-division to deliver SMARTS for LS-SWIFT's Tools
+\end{itemize}
+\cvtag{Helm}
+\cvtag{Kubernetes}
+\cvtag{Docker}
+\cvtag{OCI}
+\cvtag{RPM}
+\cvtag{Bash}
+
+
+\divider
+
+\cvevent{Intern Co-Op Technical}{KLA+}{December 2021 -- July 2022}{Chennai, India}
+\begin{itemize}
+    \item Tasked to perform a complete migration from IBM RTC to git VCS
+    \item Explored the complete expanse of the SWIFT codebase.
+    \item Collaborated with members across teams to troubleshoot issues during migration
+\end{itemize}
+\cvtag{Artifactory}
+\cvtag{NuGet}
+\cvtag{Python}
+\cvtag{Rational Team Concert}
+
+\divider
+
+\cvevent{Intern Co-Op Technical}{KLA+}{May 2021 -- July 2021}{Chennai, India}
+\begin{itemize}
+    \item Evaluated Singularity as an ad-hoc replacement to Docker in terms of performance and usage
+\end{itemize}
+\cvtag{High Performance Computing}
+\cvtag{Singularity}
+\cvtag{Docker}
+
+\divider
+
+\cvevent{Software Intern}{KLA+}{May 2020 -- December 2020}{Chennai, India}
+\begin{itemize}
+    \item Tasked to validate, prototype and test a distributed data pipeline.
+    \item Participated a collaborative effort to modernize the current monolithic software stack.
+    % \item Learned and received guidance from my peers and mentors.
+    \item Team participated and won Judge's Special Mention for an internal KLA Hackathon       ``  `   ```                         `~.
+\end{itemize}
+\cvtag{Parallel Computing}
+\cvtag{Java}
+\cvtag{Apache Kafka}
+\cvtag{Apache Spark}
+
+\divider
+
+\cvevent{Web Developer \& Editor}{The Bridge - The Official Online Magazine of PSG Tech}{Jan 2018 -- Present}{Coimbatore, India}
+\begin{itemize}
+    \item Modernized and migrated from Wordpress CMS to Ghost CMS to facilitate improved online operation of the magazine.
+    \item Edit and curate content submitted to the online magazine at PSG Tech.
+    \item Participate and work on recruitment, engagement and content generation in the Editorial Team of The Bridge.
+    \item Reporting and interviewing alumnus, their startups and work for the benefit of the student body.
+\end{itemize}
+\cvtag{PHP}
+\cvtag{Apache}
+\cvtag{Nginx}
+\cvtag{Wordpress}
+\cvtag{Ghost CMS}
+
+\cvtag{Javascript/CSS}
+\cvtag{Writing}
+\cvtag{Editing}
+\cvtag{Interviews}
+
+\divider
+
+\cvevent{Leader \& Volunteer}{U\&I - Non-formal education for underprivileged women and children}{July 2018 -- April 2020}{Coimbatore, India}
+\begin{itemize}
+    \item U\&I is a volunteer-driven charitable organization. We teach underprivileged school children.
+    \item As class head at U\&I, I worked with my peers in the capacity of recruiting, training and managing volunteers in addition to managing a class of 40 children.
+\end{itemize}
+\cvtag{Leadership}
+\cvtag{Teamwork}
+\cvtag{Community}
+
+% \cvsection{Projects}
+
+\cvsection{Education}
+
+\cvevent{MSc. Software Systems}{PSG College of Technology \hfill \faGraduationCap Score: 8/10}{June 2017 -- July 2022}{Coimbatore, India}
+\cvtag{C/C++14}
+\cvtag{OOP}
+\cvtag{Data Structures}
+\cvtag{Computer Organization}
+\cvtag{Unix Architecture}
+\cvtag{Microprocessors and Embedded Systems}
+\cvtag{Operating Systems}
+\cvtag{Principles of Compiler Design}
+
+\divider
+
+\cvevent{Higher Secondary in Computer Science}{Chennai Public School, Annanagar \hfill \faGraduationCap Score: 9.66/10}{April 2015 -- May 2017}{Chennai, India}
+\cvtag{C/C++11}
+\cvtag{Pure Sciences}
+\cvtag{Computer Science}
+\cvtag{Robotics}
+
+\cvsection{Achievements}
+
+\cvachievement{\faCode}{KLA Hackathon 2022}{Overall winner in the Developer Experience category, where our team provided a solution to provide a one-click solution to spin up a container with a preferred codebase}
+\cvtag{Docker}
+\cvtag{VSCode Server}
+\cvtag{Windows Container}
+
+\divider
+
+\cvachievement{\faTrophy}{Startup Weekend @ CEG, Chennai}{Won 2nd place, where the goal was to incubate, market research, prototype and sell an idea to a panel of judges}
+\cvtag{Teamwork}
+\cvtag{Decision Making}
+\cvtag{Marketing}
+
+\divider
+
+\cvachievement{\faAndroid}{World Robotic Olympiad}{Selected for the nationals conducted at Kolkata, India.}
+\cvtag{Robotics}
+\cvtag{Lego}
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Skills}
+
+\textcolor{SlateGrey}{\textbf{Scripting \& Programming}}
+\newline
+\begin{itemize}
+    \item Bash, Python. C/C++, Rust, Java
+    \item GNU Make, gdb, valgrind, CMake
+    \item grep, awk, sed, systemd, cron, rc
+    \item rpm, yum, pacman, apt 
+\end{itemize}
+
+\textcolor{SlateGrey}{\textbf{DevOps and Virtualization}}
+\newline
+
+\begin{itemize}
+    \item Docker, Docker-Compose, Kubernetes
+    \item ESXi, Azure, GCP, Digital Ocean
+    \item Github Actions, Azure Pipelines, Travis, Jenkins
+\end{itemize}
+
+\textcolor{SlateGrey}{\textbf{Web/App Developement}}
+\newline
+\begin{itemize}
+    \item Javascript, Sass, PHP, Python
+    \item Bootstrap, jQuery, D3.js, React.js, Django
+    \item Apache, Nginx, Wordpress, Ghost CMS
+    \item Flutter, Dart
+\end{itemize}
+
+\textcolor{SlateGrey}{\textbf{Parallel Computing}}
+\newline
+
+\begin{itemize}
+    \item Java, Scala 
+    \item Apache Spark, Apache Kafka
+\end{itemize}
+
+\textcolor{SlateGrey}{\textbf{Soft skills}}
+\newline
+
+\begin{itemize}
+    % \item Communicating, Interpersonal skills, Patient, Problem Solving, Passionate about Technology, Love to take Ownership
+    \item Communication, Interpersonal skills, Problem Solving.
+\end{itemize}
+
+% \newpage 
+
+\cvsection{Open Source}
+
+\cvevent{Contributed to `influxdb-iox`}{\url{https://github.com/influxdata/influxdb_iox}}{}{}
+\begin{itemize}
+    \item Authored PR's for a influxdb rust client for v2 API support
+\end{itemize}
+
+\divider
+
+\cvevent{Maintain \& test packages}{Arch user repository}{}{}
+\begin{itemize}
+    \item {\url{https://aur.archlinux.org/packages/microsoft-edge-stable-bin}}
+    \item {\url{https://aur.archlinux.org/packages/gk6x-bin}}
+\end{itemize}
+
+\divider
+
+\cvevent{GnuCashX}{\url{https://github.com/aakashhemadri/GnuCashX}}{}{}
+\begin{itemize}
+    \item GnuCashX is a cross-platform mobile app for the GnuCash Accounting Software
+\end{itemize}
+
+\divider
+
+\cvevent{Internship Management @ DAMCS}{\url{https://damcs.github.io/stepping-stone}}{}{}
+\begin{itemize}
+    \item Project Sanctioned by the Dept. of Applied Mathematics and Computational Sciences to manage it's internship process
+\end{itemize}
+
+\divider
+
+\cvevent{Hack[in] for Login @ PSGTech}{\url{https://github.com/damcs/hack-in}}{}{}
+\begin{itemize}
+    \item A reactjs + nodejs website that was hosted at Login 2019 @ PSGTech. A ctf website that challenges it’s participants through a series of tasks.
+\end{itemize}
+
+\divider
+
+\cvevent{xdm-hack}{\url{https://github.com/aakashhemadri/xdm-hack}}{}{}
+\begin{itemize}
+    \item An XDM theme for the X Display Manager
+\end{itemize}
+
+\divider
+
+\cvevent{Makefiles}{\url{https://github.com/aakashhemadri/makefiles}{}}{}{}
+
+\begin{itemize}
+    \item Where all my makefiles live, and a little more
+\end{itemize}
+
+% \cvevent{Garbage Collector for C}{\url{https://github.com/aakashhemadri/gc}}{}{}
+% \begin{itemize}
+%     \item An attempt at emulating a Garbage Collector in C
+% \end{itemize}
+
+% \divider
+
+% \cvevent{dotfiles}{\url{https://github.com/aakashhemadri/dotfiles}}{}{}
+% \begin{itemize}
+%     \item My personal dotfiles
+% \end{itemize}
+
+% \divider
+% \cvevent{Shell scripts}{\url{https://github.com/aakashhemadri/shell}}{}{}
+% \begin{itemize}
+%     \item Shell scripting \& mini tutorials
+% \end{itemize}
+
+% \divider
+
+\cvsection{Certifications}
+\cvevent{A Beginner's guide to Linux Kernel Development (LFD103)}{\certificate{courses/linux/lfd103.pdf}}{}{}
+
+\cvsection{Other Interests}
+
+\cvtag{Books}
+\cvtag{Comics}
+\cvtag{Trekking}
+\cvtag{History}
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+\cvskill{Tamil}{4}
+\cvskill{Telugu}{4}
+\cvskill{Hindi}{3}
+\cvskill{French}{1}
+
+\end{paracol}
+
+\end{document}
